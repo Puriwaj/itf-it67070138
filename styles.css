@@ -1,0 +1,119 @@
+/* การตั้งค่าฟอนต์น่ารักๆ */
+body {
+    font-family: 'Prompt', 'Kanit', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fef0f0; /* สีพื้นหลังหวานๆ */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    background-color: #ffcccc; /* สีชมพูน่ารัก */
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    border-radius: 20px;
+}
+
+nav ul li a:hover {
+    background-color: #ff8e7f;
+}
+
+header {
+    text-align: center;
+    padding: 50px;
+    background-color: #ffe6e6; /* สีพื้นหลังอ่อนๆ */
+}
+
+h1 {
+    color: #ff6f61;
+    font-size: 3em;
+}
+
+button {
+    background-color: #ff9f9f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ffb7b7;
+}
+
+.container {
+    padding: 20px;
+    margin: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+.grid-item {
+    background-color: #ffcccc;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ff8e7f;
+    border-radius: 15px;
+}
+
+h2 {
+    color: #ff6f61;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+#contact img {
+    margin: 20px 0;
+    border-radius: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ff6f61;
+    color: white;
+    font-size: 1.2em;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+a {
+    color: #ff6f61;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #ff8e7f;
+}
+
+/* Box Model */
+.grid-item {
+    margin: 10px;
+    padding: 20px;
+    border: 2px solid #ff6f61;
+    width: auto;
+    height: auto;
+}
