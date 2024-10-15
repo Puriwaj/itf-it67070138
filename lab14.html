@@ -3,36 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Melody's Phone Book</title>
     <link rel="stylesheet" href="styles2.css">
 </head>
 <body>
-    <div class="profile" id="profile">
-        <div class="notify"></div><p>1</p>
-    </div>
-    <h1 id="user">username, ok</h1>
-    <label>Set Username</label><input type="text" id="name"><button>set</button>
     <div class="container">
+        <h1>My Melody's Phone Book</h1>
+        <div class="profile-container">
+            <div class="profile" id="profile"></div>
+            <div class="notify">
+                <p>1</p>
+            </div>
+        </div>
+        <h2 id="user" class="username" onmouseover="hoverEffect(this)" onmouseout="removeHover(this)">Bunny</h2>
 
+        <!-- Input fields to set username and profile image -->
+        <div class="inputs">
+            <label for="name">Set the Username</label>
+            <input type="text" id="name" placeholder="Enter Username">
+            <button onclick="setName()">SET</button>
+        </div>
+        <div class="inputs">
+            <label for="profile-img-url">Set the profile image URL</label>
+            <input type="text" id="profile-img-url" placeholder="Enter Image URL">
+            <button onclick="setImg()">SET</button>
+        </div>
+
+        <!-- Phone number list section -->
+        <div class="phone-number-list">
+            <h3>Phone Number List</h3>
+            <input type="text" id="nameInput" placeholder="Name">
+            <input type="tel" id="telInput" placeholder="Tel">
+            <button onclick="addContact()">ADD</button>
+            <button onclick="saveCSV()">EXPORT</button>
+        </div>
+
+        <table id="contactTable">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Name</th>
+                    <th>Phone Number</th>
+                </tr>
+            </thead>
+            <tbody id="contactList">
+                <!-- Contacts will be dynamically added here -->
+            </tbody>
+        </table>
     </div>
-    <script>
-        const username = document.getElementById("user")
-        const input = document.getElementById("name")
-        const profile = document.getElementById("profile")
-        username.textContent = "Hello";
 
-        function setName(){
-        username.textContent = document.getElementById("name").value;
-        }
-        function setImg(){
-            profile.style.backgroundImage = "url(" + input.value +")";
-            input.value = "";
-        }
-        function addParagraph(){
-            const newpara = document.createElement("p");
-            newpara.textContent = "new paragraph";
-            newpara
-        }
-    </script>
+    <script src="script.js"></script>
+    <script src="CSV.js"></script>
 </body>
 </html>
